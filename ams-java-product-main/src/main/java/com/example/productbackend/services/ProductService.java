@@ -50,7 +50,9 @@ public class ProductService {
         try{
             var updateProduct = this.repository.getReferenceById(id);
             updateProduct.setName(product.getName());
-            updateProduct.setPrice(product.getPrice());
+            updateProduct.setRg(product.getRg());
+            updateProduct.setTelefone(product.getTelefone());
+            updateProduct.setEmail(product.getEmail());
             this.repository.save(updateProduct);
         }
         catch(EntityNotFoundException e){

@@ -19,8 +19,9 @@ public class Product implements Serializable {
 
     @Column(length = 1024,nullable = false,  name ="product_name")
     private String name;
-    
-    private Double price;
+    private String telefone;
+    private String rg;
+    private String email;
 
     public long getId() {
         return id;
@@ -34,13 +35,26 @@ public class Product implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    public double getPrice() {
-        return price;
+    public String getTelefone() {
+        return telefone;
     }
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
+    public String getRg() {
+        return rg;
+    }
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
     @Override
     public int hashCode() {
         final int prime = 31;
